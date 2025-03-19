@@ -1,0 +1,326 @@
+{% extends 'web/index.html' %}
+{% load i18n static %}
+{% block content %}
+    <!-- Hero Section -->
+    <div class="swiper swiper-hero h-dvh w-full" id="swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" data-title="{% translate 'Ultimate Oceanfront Escape' %}">
+                <img src="{% static 'img/hero-1.webp' %}" alt="slider-1"/>
+            </div>
+            <div class="swiper-slide" data-title="{% translate 'Exclusive Island Getaway' %}">
+                <img src="{% static 'img/hero-2.webp' %}" alt="slider-2"/>
+            </div>
+            <div class="swiper-slide" data-title="{% translate 'Unrivaled Waterfront Luxury' %}">
+                <img src="{% static 'img/hero-3.webp' %}" alt="slider-3"/>
+            </div>
+            <div class="swiper-slide" data-title="{% translate 'Private Paradise Awaits' %}">
+                <img src="{% static 'img/hero-4.webp' %}" alt="slider-4"/>
+            </div>
+        </div>
+        <div class="swiper-index-counter">1/4</div>
+        <div class="swiper-backdrop"></div>
+        <div class="swiper-navbar">
+            <div class="w-full flex justify-between items-center">
+                <h1 class="text-4xl font-extrabold text-white font-family-montserrat">AquaVilla</h1>
+                <nav class="nav">
+                    <ul class="flex gap-2 justify-start items-center h-12">
+                        <li><a href="#">{% translate 'Contact Us' %}</a></li>
+                        <li><a href="#">{% translate 'About Us' %}</a></li>
+                        <li><a href="#">{% translate 'Investment' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="swiper-content">
+            <div class="h-full w-full flex justify-center items-center">
+                <h2 class="text-6xl sm:text-7xl lg:text-8xl text-white font-extrabold leading-tight text-center shadow-lg px-6 py-4 mb-24"
+                    id="swiper-content-title">
+                    {% translate 'Welcome to AquaVillas' %}
+                </h2>
+            </div>
+        </div>
+        <div class="swiper-social">
+            <ul class="flex flex-col justify-end items-center gap-3">
+                <li><a href="#"><i class="fa fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="py-32 ">
+        <div class="container mx-auto text-center">
+            <div class="border border-gray-500 p-10 rounded-xl shadow-xl">
+                <!-- Section Heading -->
+                <h3 class="text-4xl font-extrabold text-white mb-6 animate__animated"
+                    data-animate="animate__backInUp">{% translate 'About AquaVillas' %}</h3>
+                <!-- Description -->
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12 animate__animated" data-animate="animate__backInUp">
+                    {% translate 'AquaVillas is redefining waterfront living with our floating villas. Combining luxurious designs, sustainable features, and an unparalleled lifestyle, we offer a unique opportunity to invest in eco-friendly properties with breathtaking views of the water.' %}
+                </p>
+                <!-- Key Features Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="text-white animate__animated animate__delay-1s">
+                        <h4 class="text-xl font-semibold mb-3">{% translate 'Luxury Design' %}</h4>
+                        <p class="text-gray-300">
+                            {% translate 'Each AquaVilla is a masterpiece of modern architecture, featuring sleek lines, expansive windows, and cutting-edge designs that blend seamlessly with the natural environment.' %}
+                        </p>
+                    </div>
+                    <div class="text-white animate__animated animate__delay-2s">
+                        <h4 class="text-xl font-semibold mb-3">{% translate 'Eco-Friendly Construction' %}</h4>
+                        <p class="text-gray-300">
+                            {% translate 'Our villas are constructed using sustainable, energy-efficient materials and systems to minimize environmental impact while maximizing durability and comfort.' %}
+                        </p>
+                    </div>
+                    <div class="text-white animate__animated animate__delay-3s">
+                        <h4 class="text-xl font-semibold mb-3">{% translate 'Unmatched Lifestyle' %}</h4>
+                        <p class="text-gray-300">
+                            {% translate 'Experience the ultimate in waterfront living with private terraces, smart-home technology, and unparalleled views of the water, making each AquaVilla a true retreat.' %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Call to Action Button -->
+                <a href="#investment"
+                   class="btn btn-outline-primary text-xl mt-6 animate__animated animate__delay-4s">{% translate 'Learn More About Us' %}</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Featured Villas Section -->
+    <section class="py-20  text-white">
+        <div class="container  text-center flex justify-center flex-col">
+            <h3 class="text-4xl font-extrabold mb-6 animate__animated">{% translate 'Explore Our Villas' %}</h3>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12 animate__animated animate__delay-1s">
+                {% translate 'Each AquaVilla offers modern architecture, luxurious amenities, and eco-friendly construction designed to provide you with the most relaxing, sustainable living experience.' %}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-8 rounded-lg animate__animated animate__delay-2s">
+                    <img src="{% static 'img/hero-1.webp' %}" alt="Villa 1"
+                         class="w-full h-64 object-cover rounded-lg mb-6"/>
+                    <h4 class="text-xl font-semibold">{% translate 'Oceanfront Villa' %}</h4>
+                    <p>{% translate 'A spacious, modern villa with panoramic ocean views, ideal for those seeking tranquility and luxury on the water.' %}</p>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-lg animate__animated animate__delay-3s">
+                    <img src="{% static 'img/hero-2.webp' %}" alt="Villa 2"
+                         class="w-full h-64 object-cover rounded-lg mb-6"/>
+                    <h4 class="text-xl font-semibold">{% translate 'Exclusive Getaway' %}</h4>
+                    <p>{% translate 'An exclusive floating retreat that offers both luxury and privacy with cutting-edge amenities.' %}</p>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-lg animate__animated animate__delay-4s">
+                    <img src="{% static 'img/hero-3.webp' %}" alt="Villa 3"
+                         class="w-full h-64 object-cover rounded-lg mb-6"/>
+                    <h4 class="text-xl font-semibold">{% translate 'Private Paradise' %}</h4>
+                    <p>{% translate 'The ultimate private escape with sustainable features and unparalleled comfort, perfect for discerning clients.' %}</p>
+                </div>
+            </div>
+            {#            <a href="#"#}
+            {#               class="btn btn-outline-primary text-xl mt-8 max-w-sm self-center">{% translate 'See All Villas' %}</a>#}
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-32 bg-gray-900 text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-extrabold mb-6">{% translate 'What Our Clients Say' %}</h3>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                {% translate 'Here’s what some of our satisfied clients have to say about their experience with AquaVillas.' %}
+            </p>
+
+            <!-- Testimonial Carousel -->
+            <div class="swiper swiper-testimonial">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <blockquote class="text-xl text-gray-300">
+                            {% translate '“AquaVillas exceeded all of our expectations! The design is stunning, and the eco-friendly features make it the perfect investment.”' %}
+                        </blockquote>
+                        <footer class="mt-4 font-semibold text-white">{% translate 'John Doe, Investor' %}</footer>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote class="text-xl text-gray-300">
+                            {% translate '“Living in an AquaVilla has been an extraordinary experience. The privacy, luxury, and nature are unmatched!”' %}
+                        </blockquote>
+                        <footer class="mt-4 font-semibold text-white">{% translate 'Jane Smith, Resident' %}</footer>
+                    </div>
+                    <div class="swiper-slide">
+                        <blockquote class="text-xl text-gray-300">
+                            {% translate '“We love our AquaVilla! It’s the perfect blend of comfort and sustainability. Highly recommend it to anyone!”' %}
+                        </blockquote>
+                        <footer class="mt-4 font-semibold text-white">{% translate 'Robert Brown, Resident' %}</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-black text-white py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-white animate__animated " data-animate="animate__backInLeft">{% translate 'Frequently Asked Questions' %}</h2>
+        <div class="grid pt-8 text-left border-t border-gray-700 md:gap-16 md:grid-cols-2">
+            <div>
+                <div class="mb-10 animate__animated animate__delay-1s">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-white">
+                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        {% translate 'What do you mean by "Floating Villas"?' %}
+                    </h3>
+                    <p class="text-gray-400">
+                        {% translate 'Our floating villas are luxury homes built on water, combining modern design with eco-friendly construction and luxurious amenities. These villas are designed to offer the ultimate in comfort while minimizing environmental impact.' %}
+                    </p>
+                </div>
+                <div class="mb-10 animate__animated animate__delay-2s">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-white">
+                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        {% translate 'What is the "part-title ownership" model?' %}
+                    </h3>
+                    <p class="text-gray-400">
+                        {% translate 'The part-title ownership model allows you to own a fraction of one of our floating villas, offering a more accessible way to invest in luxury real estate while enjoying both personal use and income-generating opportunities.' %}
+                    </p>
+                </div>
+                <div class="mb-10 animate__animated animate__delay-3s">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-white">
+                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        {% translate 'How do I get started with purchasing a floating villa?' %}
+                    </h3>
+                    <p class="text-gray-400">
+                        {% translate 'To begin the process, contact our sales team for a consultation. You can also explore our villas through virtual tours or by visiting the show units. We’ll help you review the available ownership options and assist with the purchasing process.' %}
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="mb-10 animate__animated animate__delay-1s">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-white">
+                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        {% translate 'How does the "Lifetime Access" work for my purchase?' %}
+                    </h3>
+                    <p class="text-gray-400">
+                        {% translate 'Once you purchase a share of a floating villa, you will receive lifetime access to the AquaVillas platform, including all future updates, improvements, and enhancements to the project without any additional cost.' %}
+                    </p>
+                </div>
+                <div class="mb-10 animate__animated animate__delay-2s">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-white">
+                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        {% translate 'Can I use AquaVillas for more than one project?' %}
+                    </h3>
+                    <p class="text-gray-400">
+                        {% translate 'Yes, AquaVillas can be used for multiple projects, including personal and commercial uses, provided it is not used for creating competing floating villa projects.' %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-extrabold mb-6">{% translate 'Investment Opportunities' %}</h3>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                {% translate 'AquaVillas offers a range of investment opportunities for those looking to own a part of our luxurious floating villas. Whether you’re looking for a vacation home or a long-term investment, we provide flexible ownership models.' %}
+            </p>
+            <a href="#" class="btn btn-outline-white text-xl">{% translate 'Learn More About Investment' %}</a>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-black text-white text-center">
+        <div class="container mx-auto">
+            <h3 class="text-4xl font-extrabold mb-6">{% translate 'Ready to Invest in Luxury?' %}</h3>
+            <p class="text-lg mb-12">
+                {% translate 'Join AquaVillas and be part of the next evolution in sustainable, waterfront luxury living. Get in touch with our team to discuss how you can secure your floating villa or investment today.' %}
+            </p>
+            <a href="#" class="btn btn-outline-white text-xl">{% translate 'Contact Us Today' %}</a>
+        </div>
+    </section>
+
+
+    <footer class="bg-black text-white py-12 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Logo and Brand Name -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-extrabold font-family-montserrat">AquaVillas</h1>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">{% translate 'Company' %}</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-gray-500">{% translate 'About Us' %}</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gray-500">{% translate 'Contact Us' %}</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gray-500">{% translate 'Investment' %}</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gray-500">{% translate 'Privacy Policy' %}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">{% translate 'Services' %}</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class>{% translate 'Floating Villas' %}</a>
+                        </li>
+                        <li><a href="#" class>{% translate 'Vacation Rentals' %}</a>
+                        </li>
+                        <li><a href="#"
+                               class>{% translate 'Ownership Options' %}</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">{% translate 'Follow Us' %}</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class><i
+                                class="fa fa-brands fa-facebook-f"></i> {% translate 'Facebook' %}</a></li>
+                        <li><a href="#" class><i
+                                class="fa fa-brands fa-instagram"></i> {% translate 'Instagram' %}</a></li>
+                        <li><a href="#" class><i
+                                class="fa fa-brands fa-twitter"></i> {% translate 'Twitter' %}</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">{% translate 'Contact Us' %}</h4>
+                    <ul>
+                        <li class="text-gray-300">{% translate 'Email:' %} info@aquavillas.com</li>
+                        <li class="text-gray-300">{% translate 'Phone:' %} +1 800 123 4567</li>
+                        <li class="text-gray-300">{% translate 'Address:' %} 123 Waterfront Avenue, Dominican Republic
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright and Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-sm text-gray-400">
+                    &copy; <span id="footer-copy-law">2025</span> AquaVillas. {% translate 'All rights reserved.' %}
+                </p>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
